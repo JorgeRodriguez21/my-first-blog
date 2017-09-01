@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 from django.db import models
 from django.utils import timezone
+from django.shortcuts import render
 
 class Post(models.Model):
     author = models.ForeignKey('auth.User')
@@ -19,4 +20,3 @@ class Post(models.Model):
 
         def __str__(self):
             return self.title
-            
